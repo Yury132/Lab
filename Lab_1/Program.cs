@@ -70,6 +70,7 @@ namespace Lab_1
                 {
                     color(2);
                     Console.WriteLine("Бесконечное Количество Корней");
+                    Console.ReadLine();
                     return (0);
                 }
 
@@ -77,7 +78,8 @@ namespace Lab_1
                 {
                     color(1);
                     Console.WriteLine("Корней Нет");
-                    return (0);
+                Console.ReadLine();
+                return (0);
                 }
 
                 if (a == 0)
@@ -87,20 +89,23 @@ namespace Lab_1
                     {
                         color(1);
                         Console.WriteLine("корней Нет");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     else if (var1 == 0)
                     {
                         color(2);
                         Console.WriteLine("x1=0");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     else
                     {
                         color(2);
                         double x1 = Math.Sqrt(var1), x2 = -Math.Sqrt(var1);
                         Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                 }
 
@@ -111,13 +116,15 @@ namespace Lab_1
                     {
                         color(1);
                         Console.WriteLine("корней Нет");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     else if (var2 == 0)
                     {
                         color(2);
                         Console.WriteLine("x1=0");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     else
                     {
@@ -125,7 +132,8 @@ namespace Lab_1
                         double y1 = Math.Sqrt(var2);
                         double x1 = Math.Sqrt(y1), x2 = -Math.Sqrt(y1);
                         Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
 
                 }
@@ -137,7 +145,8 @@ namespace Lab_1
                     {
                         color(1);
                         Console.WriteLine("корней Нет");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     double t1, t2;
                     List<double> list = new List<double>();
@@ -148,7 +157,8 @@ namespace Lab_1
                     {
                         color(1);
                         Console.WriteLine("корней Нет");
-                        return (0);
+                    Console.ReadLine();
+                    return (0);
                     }
                     if (t1 == 0)
                     {
@@ -179,7 +189,8 @@ namespace Lab_1
 
 
                 }
-                return (0);
+            Console.ReadLine();
+            return (0);
             
         }
     }
