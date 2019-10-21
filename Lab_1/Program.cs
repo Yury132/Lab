@@ -36,7 +36,7 @@ namespace Lab_1
 
                 if (!f1 || !f2 || !f3)
                 {
-                    Console.Write("Необходимо ввести вещественные числа!");
+                    Console.WriteLine("Необходимо ввести вещественные числа!");
                 }
             } while (!f1 || !f2 || !f3);
 
@@ -50,6 +50,7 @@ namespace Lab_1
                 Console.WriteLine("Бесконечное Количество Корней");
                 return (0);
             }
+
             if(a==0 && b == 0)
             {
                 color(1);
@@ -57,7 +58,29 @@ namespace Lab_1
                 return (0);
             }
 
-
+            if (a == 0)
+            {
+                double var = -c/b;
+                if(var < 0)
+                {
+                    color(1);
+                    Console.WriteLine("корней Нет");
+                    return (0);
+                }
+                else if (var == 0)
+                {
+                    color(2);
+                    Console.WriteLine("x1=0");
+                    return (0);
+                }
+                else
+                {
+                    color(2);
+                    double x1 = Math.Sqrt(var), x2 = -Math.Sqrt(var);
+                    Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
+                    return (0);
+                }
+            }
 
 
 
