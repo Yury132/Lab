@@ -103,15 +103,60 @@ namespace Lab_1
                     double y1 = Math.Sqrt(var2);
                     double x1 = Math.Sqrt(y1), x2 = -Math.Sqrt(y1);
                     Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
-                    return (0);
+                    return(0);
                 }
 
             }
+            else
+            {
+                double d = b * b - 4 * a * c;
+
+                if (d < 0)
+                {
+                    color(1);
+                    Console.WriteLine("корней Нет");
+                    return (0);
+                }
+                double t1, t2;
+                List<double> list = new List<double>();
+                t1 = (-b + Math.Sqrt(d)) / (2 * a);
+                t2 = (-b - Math.Sqrt(d)) / (2 * a);
+
+                if (t1 < 0 && t2 < 0)
+                {
+                    color(1);
+                    Console.WriteLine("корней Нет");
+                    return (0);
+                }
+                if (t1 == 0)
+                {
+                    list.Add(t1);
+                }
+                if (t1 > 0)
+                {
+                    list.Add(Math.Sqrt(t1));
+                    list.Add(-Math.Sqrt(t1));
+                }
+                if (t1 != t2)
+                {
+                    if (t2 == 0) list.Add(t2);
+                    if (t2 > 0)
+                    {
+                        list.Add(Math.Sqrt(t2));
+                        list.Add(-Math.Sqrt(t2));
+                    }
+                }
+
+                int i1 = 0;
+                color(2);
+                foreach(double i2 in list)
+                {
+                    i1++;
+                    Console.WriteLine("x"+i1.ToString()+"="+i2.ToString());
+                }
 
 
-
-
-
+            }
             return (0);
         }
     }
