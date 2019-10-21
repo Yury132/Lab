@@ -60,14 +60,14 @@ namespace Lab_1
 
             if (a == 0)
             {
-                double var = -c/b;
-                if(var < 0)
+                double var1 = -c/b;
+                if(var1 < 0)
                 {
                     color(1);
                     Console.WriteLine("корней Нет");
                     return (0);
                 }
-                else if (var == 0)
+                else if (var1 == 0)
                 {
                     color(2);
                     Console.WriteLine("x1=0");
@@ -76,12 +76,37 @@ namespace Lab_1
                 else
                 {
                     color(2);
-                    double x1 = Math.Sqrt(var), x2 = -Math.Sqrt(var);
+                    double x1 = Math.Sqrt(var1), x2 = -Math.Sqrt(var1);
                     Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
                     return (0);
                 }
             }
 
+            if (b == 0)
+            {
+                double var2 = -c / a;
+                if(var2 < 0)
+                {
+                    color(1);
+                    Console.WriteLine("корней Нет");
+                    return (0);
+                }
+                else if(var2 == 0)
+                {
+                    color(2);
+                    Console.WriteLine("x1=0");
+                    return (0);
+                }
+                else
+                {
+                    color(2);
+                    double y1 = Math.Sqrt(var2);
+                    double x1 = Math.Sqrt(y1), x2 = -Math.Sqrt(y1);
+                    Console.WriteLine("x1= " + x1.ToString() + " x2= " + x2.ToString());
+                    return (0);
+                }
+
+            }
 
 
 
