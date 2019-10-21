@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 namespace Lab_1
 {
     class Program
-    {
-        static void Main(string[] args)
+    {   
+        static void color(int k)
+        {
+            switch (k) {
+                case 1:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case 2:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+            }
+        }
+        static int Main(string[] args)
         {
             Console.Title = "Усынин Юрий ИУ5-35Б";
 
@@ -32,6 +43,28 @@ namespace Lab_1
             Console.WriteLine(a.ToString());
             Console.WriteLine(b.ToString());
             Console.WriteLine(c.ToString());
+
+            if(a==0 && b==0 && c==0)
+            {
+                color(2);
+                Console.WriteLine("Бесконечное Количество Корней");
+                return (0);
+            }
+            if(a==0 && b == 0)
+            {
+                color(1);
+                Console.WriteLine("Корней Нет");
+                return (0);
+            }
+
+
+
+
+
+
+
+
+            return (0);
         }
     }
 }
