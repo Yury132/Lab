@@ -40,9 +40,9 @@ namespace Lab_1
                     Console.WriteLine("Введите вещественные числа в параметрах командной строки!");
                     return (0);
                 }
-                Console.WriteLine(a.ToString());
-                Console.WriteLine(b.ToString());
-                Console.WriteLine(c.ToString());
+               // Console.WriteLine(a.ToString());
+               // Console.WriteLine(b.ToString());
+              //  Console.WriteLine(c.ToString());
             }
 
             else
@@ -62,9 +62,9 @@ namespace Lab_1
                     }
                 } while (!f1 || !f2 || !f3);
 
-                Console.WriteLine(a.ToString());
-                Console.WriteLine(b.ToString());
-                Console.WriteLine(c.ToString());
+               // Console.WriteLine(a.ToString());
+                //Console.WriteLine(b.ToString());
+                //Console.WriteLine(c.ToString());
             }
                 if (a == 0 && b == 0 && c == 0)
                 {
