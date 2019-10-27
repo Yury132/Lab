@@ -13,8 +13,14 @@ namespace Lab_2
             this.Type = "Круг";
         }
         public override double Area()
-        {
-            return Math.PI * this.radius * this.radius;
+        { 
+            double result = Math.PI * this.radius * this.radius;
+            if (result < 0)
+            {
+                Console.WriteLine("Введенные данные должны быть неотрицательынми!");
+                return -1;
+            }
+            else return result;
         }
         public override string ToString()
         {

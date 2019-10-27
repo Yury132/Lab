@@ -17,7 +17,13 @@ namespace Lab_2
 
         public override double Area()
         {
-            return this.width * this.height;
+            double result = this.width * this.height;
+            if (result < 0)
+            {
+                Console.WriteLine("Введенные данные должны быть неотрицательынми!");
+                return -1;
+            }
+            else return result;
         }
 
         public override string ToString()
