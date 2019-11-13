@@ -57,6 +57,33 @@ namespace Lab_3
             matrix[2, 2] = circle;
             Console.WriteLine(matrix.ToString());
 
+            for (int i = 0; i < 50; i++)
+                Console.Write("-");
+            Console.WriteLine("\n");
+            //-------------------------------------------------------------------------------------
+
+
+            SimpleList<GeometricalFigure> list = new SimpleList<GeometricalFigure>();
+            list.Add(circle);
+            list.Add(rectangle);
+            list.Add(square);
+
+            Console.WriteLine("\nПеред Сортировкой: ");
+            foreach (var x in list)
+                Console.WriteLine(x.ToString());
+
+            list.Sort();
+            Console.WriteLine("\nПосле Сортировки: ");
+            foreach (var x in list)
+                Console.WriteLine(x.ToString());
+
+            for (int i = 0; i < 50; i++)
+                Console.Write("-");
+            Console.WriteLine("\n");
+            //-------------------------------------------------------------------------------------
+
+
+
             Console.ReadKey();
 
         }
