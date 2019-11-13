@@ -49,6 +49,13 @@ namespace Lab_3
             Console.WriteLine("\n");
             //-------------------------------------------------------------------------------------
 
+            Console.WriteLine("\nМатрица: ");
+            Matrix<GeometricalFigure> matrix = new Matrix<GeometricalFigure>(3, 3, new FigureMatrixCheckEmpty());
+
+            matrix[0, 0] = rectangle;
+            matrix[1, 1] = square;
+            matrix[2, 2] = circle;
+            Console.WriteLine(matrix.ToString());
 
             Console.ReadKey();
 

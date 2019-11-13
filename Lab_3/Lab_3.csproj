@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="FigureMatrixCheckEmpty.cs" />
+    <Compile Include="IMatrixCheckEmpty.cs" />
     <Compile Include="SparseMatrix.cs" />
     <Compile Include="GeometricalFigure.cs" />
     <Compile Include="IPrint.cs" />
