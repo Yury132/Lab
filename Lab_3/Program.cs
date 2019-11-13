@@ -21,15 +21,15 @@ namespace Lab_3
             f1.Add(square);
             f1.Add(circle);
 
-            Console.WriteLine("\nСодержимое коллекции: ");
+            Console.WriteLine("\nСодержимое коллекции ArrayList: ");
             foreach (var x in f1)
                 Console.WriteLine(x.ToString());
 
             for (int i = 0; i < 50; i++)
                 Console.Write("-");
-            Console.WriteLine("\n");
             //-------------------------------------------------------------------------------------
 
+            Console.Write("\nКоллекция класса List<Figure>");
             List<GeometricalFigure> f2 = new List<GeometricalFigure>();
             f2.Add(circle);
             f2.Add(rectangle);
@@ -46,7 +46,6 @@ namespace Lab_3
 
             for (int i = 0; i < 50; i++)
                 Console.Write("-");
-            Console.WriteLine("\n");
             //-------------------------------------------------------------------------------------
 
             Console.WriteLine("\nМатрица: ");
@@ -63,27 +62,18 @@ namespace Lab_3
             //-------------------------------------------------------------------------------------
 
 
-            SimpleList<GeometricalFigure> list = new SimpleList<GeometricalFigure>();
-            list.Add(circle);
-            list.Add(rectangle);
-            list.Add(square);
+            Console.WriteLine("\nSimpleStack: ");
+            SimpleStack<GeometricalFigure> stack = new SimpleStack<GeometricalFigure>();
+            stack.Push(rectangle);
+            stack.Push(square);
+            stack.Push(circle);
 
-            Console.WriteLine("\nПеред Сортировкой: ");
-            foreach (var x in list)
-                Console.WriteLine(x.ToString());
-
-            list.Sort();
-            Console.WriteLine("\nПосле Сортировки: ");
-            foreach (var x in list)
-                Console.WriteLine(x.ToString());
-
-            for (int i = 0; i < 50; i++)
-                Console.Write("-");
-            Console.WriteLine("\n");
-            //-------------------------------------------------------------------------------------
-
-
-
+            while (stack.Count > 0)
+            {
+                GeometricalFigure f = stack.Pop();
+                Console.WriteLine(f);
+            }
+          
             Console.ReadKey();
 
         }
