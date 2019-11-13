@@ -21,19 +21,35 @@ namespace Lab_3
             f1.Add(square);
             f1.Add(circle);
 
-            Console.WriteLine("Несортированный ArrayList");
+            Console.WriteLine("\nСодержимое коллекции: ");
             foreach (var x in f1)
                 Console.WriteLine(x.ToString());
-
-            f1.Sort();
-            Console.WriteLine("Отсортированный ArrayList");
-            foreach (var x in f1)
-                Console.WriteLine(x.ToString());
-
 
             for (int i = 0; i < 50; i++)
                 Console.Write("-");
             Console.WriteLine("\n");
+            //-------------------------------------------------------------------------------------
+
+            List<GeometricalFigure> f2 = new List<GeometricalFigure>();
+            f2.Add(circle);
+            f2.Add(rectangle);
+            f2.Add(square);
+
+            Console.WriteLine("\nПеред сортировкой: ");
+            foreach (var x in f2)
+                Console.WriteLine(x.ToString());
+
+            f2.Sort();
+            Console.WriteLine("\nПосле сортировки: ");
+            foreach (var x in f2)
+                Console.WriteLine(x.ToString());
+
+            for (int i = 0; i < 50; i++)
+                Console.Write("-");
+            Console.WriteLine("\n");
+            //-------------------------------------------------------------------------------------
+
+
             Console.ReadKey();
 
         }
