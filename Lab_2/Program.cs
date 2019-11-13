@@ -6,9 +6,9 @@ namespace Lab_2
     {
         static void Main(string[] args)
         {
-            Rectangle rect = new Rectangle(5, 4);
-            Square square = new Square(5);
-            Circle circle = new Circle(5);
+            Rectangle rect = new Rectangle(7, 8.2);
+            Square square = new Square(4.5);
+            Circle circle = new Circle(11);
 
             rect.Print();
             square.Print();
