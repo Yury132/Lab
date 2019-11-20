@@ -47,6 +47,38 @@ namespace Lab_4
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string word = this.textBox2.Text.Trim();
+            if(!string.IsNullOrWhiteSpace(word) && list.Count > 0)
+            {
+                string wordUpper = word.ToUpper();
+                List<string> tempList = new List<string>();
+                Stopwatch t = new Stopwatch();
+                t.Start();
+
+                foreach (string str in list)
+                {
+                    if (str.ToUpper().Contains(wordUpper)){
+                        tempList.Add(str);
+                    }
+                }
+                t.Stop();
+                this.textBox3.Text = t.Elapsed.ToString();
+                this.listBox1.BeginUpdate();
+                this.listBox1.Items.Clear();
+                foreach (string str in tempList)
+                {
+                    this.listBox1.Items.Add(str);
+                }
+                this.listBox1.EndUpdate();
+            }
+            else
+            {
+                MessageBox.Show("Введите файл и слово для поиска!");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
