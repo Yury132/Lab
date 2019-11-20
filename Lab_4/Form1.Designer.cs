@@ -57,12 +57,12 @@
             this.label1.Size = new System.Drawing.Size(167, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Время чтения из файла";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(578, 42);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(177, 22);
             this.textBox1.TabIndex = 2;
             // 
@@ -105,6 +105,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(332, 175);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(141, 22);
             this.textBox3.TabIndex = 7;
             // 

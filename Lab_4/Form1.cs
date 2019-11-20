@@ -20,7 +20,7 @@ namespace Lab_4
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //Выбор файла
         {
             OpenFileDialog fd = new OpenFileDialog();
             fd.Filter = "текстовые файлы|*.txt";
@@ -45,7 +45,7 @@ namespace Lab_4
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Поиск слова
         {
             string word = this.textBox2.Text.Trim();
             if(!string.IsNullOrWhiteSpace(word) && list.Count > 0)
@@ -77,9 +77,6 @@ namespace Lab_4
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
