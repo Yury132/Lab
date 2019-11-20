@@ -62,7 +62,16 @@ namespace Lab_4
                     }
                 }
                 t.Stop();
-                this.textBox3.Text = t.Elapsed.ToString();
+
+                if (tempList.Count == 0)
+                {
+                    this.textBox3.Text = "Слово не найдено!";
+                }
+                else
+                {
+                    this.textBox3.Text = t.Elapsed.ToString();
+                }
+
                 this.listBox1.BeginUpdate();
                 this.listBox1.Items.Clear();
                 foreach (string str in tempList)
