@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Lab_2;
 
 namespace Lab_3
 {
@@ -14,6 +12,7 @@ namespace Lab_3
             Rectangle rectangle = new Rectangle(10, 5);
             Circle circle = new Circle(10);
             Square square = new Square(5);
+            
 
             ArrayList f1 = new ArrayList();
 

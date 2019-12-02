@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Lab_2
 {
     class Program
@@ -13,6 +14,9 @@ namespace Lab_2
             rect.Print();
             square.Print();
             circle.Print();
+
+            Console.ReadKey();
+
         }
     }
 }

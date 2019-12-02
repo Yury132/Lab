@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab_2
 {
-    class Circle : GeometricalFigure, IPrint
+    public class Circle : GeometricalFigure, IPrint
     {
         public double radius { get; set; }
         public Circle(double r)
@@ -13,7 +13,7 @@ namespace Lab_2
             this.Type = "Круг";
         }
         public override double Area()
-        { 
+        {
             double result = Math.PI * this.radius * this.radius;
             if (result < 0)
             {
