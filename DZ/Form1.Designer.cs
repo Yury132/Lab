@@ -191,10 +191,10 @@
             // 
             // textBoxTimeNechetFind
             // 
-            this.textBoxTimeNechetFind.Location = new System.Drawing.Point(916, 433);
+            this.textBoxTimeNechetFind.Location = new System.Drawing.Point(872, 433);
             this.textBoxTimeNechetFind.Name = "textBoxTimeNechetFind";
             this.textBoxTimeNechetFind.ReadOnly = true;
-            this.textBoxTimeNechetFind.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTimeNechetFind.Size = new System.Drawing.Size(144, 22);
             this.textBoxTimeNechetFind.TabIndex = 17;
             // 
             // labelTimeNechetFind
