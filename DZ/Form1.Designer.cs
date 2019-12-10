@@ -46,6 +46,8 @@
             this.textBoxNumberOfPotoks2 = new System.Windows.Forms.TextBox();
             this.textBoxTimeNechetFind = new System.Windows.Forms.TextBox();
             this.labelTimeNechetFind = new System.Windows.Forms.Label();
+            this.buttonSaveReport = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -204,11 +206,33 @@
             this.labelTimeNechetFind.TabIndex = 18;
             this.labelTimeNechetFind.Text = "Время нечеткого поиска";
             // 
+            // buttonSaveReport
+            // 
+            this.buttonSaveReport.Location = new System.Drawing.Point(462, 561);
+            this.buttonSaveReport.Name = "buttonSaveReport";
+            this.buttonSaveReport.Size = new System.Drawing.Size(141, 54);
+            this.buttonSaveReport.TabIndex = 19;
+            this.buttonSaveReport.Text = "Сохранение Отчета";
+            this.buttonSaveReport.UseVisualStyleBackColor = true;
+            this.buttonSaveReport.Click += new System.EventHandler(this.buttonSaveReport_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(609, 561);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(123, 54);
+            this.buttonClose.TabIndex = 20;
+            this.buttonClose.Text = "Закрыть";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 673);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonSaveReport);
             this.Controls.Add(this.labelTimeNechetFind);
             this.Controls.Add(this.textBoxTimeNechetFind);
             this.Controls.Add(this.textBoxNumberOfPotoks2);
@@ -228,7 +252,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Форма";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +278,8 @@
         private System.Windows.Forms.TextBox textBoxNumberOfPotoks2;
         private System.Windows.Forms.TextBox textBoxTimeNechetFind;
         private System.Windows.Forms.Label labelTimeNechetFind;
+        private System.Windows.Forms.Button buttonSaveReport;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
 
