@@ -16,6 +16,7 @@ namespace DZ
     public partial class Form1 : Form
     {
         List<string> list = new List<string>();
+       
         public Form1()
         {
             InitializeComponent();
@@ -117,15 +118,80 @@ namespace DZ
                 timer.Start();
 
                 List<ParallelSearchResult> Result = new List<ParallelSearchResult>();
+                List<MinMax> arrayDivList = SubArrays.DivideSubArrays(0, list.Count, ThreadCount);
+                int count = arrayDivList.Count;
 
+                Task<List<ParallelSearchResult>>[] tasks = new Task<List<ParallelSearchResult>>[count];
 
+                for (int i = 0; i < count; i++)
+                {
+                    List<string> tempTaskList = list.GetRange(arrayDivList[i].Min, 
+                        arrayDivList[i].Max - arrayDivList[i].Min);
 
+                    tasks[i] = new Task<List<ParallelSearchResult>>(
+                         ArrayThreadTask,
+                          new ParallelSearchThreadParam()
+                          {
+                              tempList = tempTaskList,
+                              maxDist = maxDist,
+                              ThreadNum = i,
+                              wordPattern = word
+                          });
+                    tasks[i].Start();
+                }
+                Task.WaitAll(tasks);
+                timer.Stop();
+                for (int i = 0; i < count; i++) 
+                { 
+                    Result.AddRange(tasks[i].Result);
+                }
+                timer.Stop();
 
+                this.textBoxTimeNechetFind.Text = timer.Elapsed.ToString();
+                this.textBoxNumberOfPotoks2.Text = count.ToString();
+                this.listBox1.BeginUpdate();
+                this.listBox1.Items.Clear();
+
+                foreach (var x in Result)
+                {
+                    string temp = x.word + "(расстояние=" + x.dist.ToString() + " поток="
+                        + x.ThreadNum.ToString() + ")";
+                    this.listBox1.Items.Add(temp);
+                }
+                this.listBox1.EndUpdate();
             }
             else
             {
                 MessageBox.Show("Необходимо выбрать файл и ввести слово для поиска");
             }
+        }
+
+        public static List<ParallelSearchResult> ArrayThreadTask(object paramObj)
+        {
+            Levenshtein L1 = new Levenshtein();
+            ParallelSearchThreadParam param = (ParallelSearchThreadParam)paramObj;
+
+            string wordUpper = param.wordPattern.Trim().ToUpper();
+
+            List<ParallelSearchResult> Result = new List<ParallelSearchResult>();
+
+            foreach (string str in param.tempList)
+            {
+                int dist = L1.Distance(str.ToUpper(), wordUpper);
+
+                if (dist <= param.maxDist)
+                {
+                    ParallelSearchResult temp = new ParallelSearchResult()
+                    {
+                        word = str,
+                        dist = dist,
+                        ThreadNum = param.ThreadNum
+                    };
+                    Result.Add(temp);
+                }
+
+            }
+            return Result;
         }
     }
 }
