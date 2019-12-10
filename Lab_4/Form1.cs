@@ -105,6 +105,9 @@ namespace Lab_4
                                 listBox1.Items.Add(str + "  (расстояние = " + distant.ToString() + ")");
                             }
                         }
+
+                        if (listBox1.Items.Count == 0) listBox1.Items.Add("Слова не найдены! Введите расстояние Левенштейна бОльшее!");
+
                         listBox1.EndUpdate();
                     }
                     else 
