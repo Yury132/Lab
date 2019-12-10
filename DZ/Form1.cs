@@ -47,8 +47,15 @@ namespace DZ
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) // Четкий поиск
+        private void buttonFind_Click(object sender, EventArgs e) // Четкий поиск
         {
+            textBoxMaxDistanceNechet.Text = "";
+            textBoxNumberOfPotoks1.Text = "";
+            textBoxNumberOfPotoks2.Text = "";
+            textBoxTimeNechetFind.Text = "";
+
+
+
             string word = this.textBoxFind.Text.Trim();
             Levenshtein L = new Levenshtein();
 
@@ -91,8 +98,10 @@ namespace DZ
             }
         }
 
-        private void buttonNechetFind_Click(object sender, EventArgs e)
+        private void buttonNechetFind_Click(object sender, EventArgs e)    //Нечеткий Поиск
         {
+            textBox3.Text = "";
+
             string word = this.textBoxFind.Text.Trim();
 
             if (!string.IsNullOrWhiteSpace(word) && list.Count > 0)
